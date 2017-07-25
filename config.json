@@ -1,0 +1,11 @@
+{
+  "db_config": {
+    "host": "5.135.242.245",
+    "user": "kiwi",
+    "password": "kiwi",
+    "port": 5432,
+    "dbname": "kiwi_weekend"
+  },
+  "ban_list": [
+  ]
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Search results</title>
+</head>
+<body>
+<form action="/search" method="get">
+    From:
+    <input type="text" name="from" value="Praha">
+    To:
+    <input type="text" name="to" value="Brno">
+    Date from:
+    <input type="date" name="date_from" value="2017-07-23" data-date-format="YYYY-MM-DD" value="Brno">
+    Date to:
+    <input type="date" name="date_to" value="2017-07-23" data-date-format="YYYY-MM-DD" value="Brno"><br>
+    <input type="submit" value="Submit">
+</form>
+<ul>
+    {% for result in result_list %}
+        <li>
+            <img src='{{ result.type }}.png' height="32" width="32">
+            <h2>{{ result.from }} - {{ result.to }}</h2><br>
+            <h3>{{ result.departure }} -> {{ result.arrival }}</h3><br>
+            <h2>{{ result.price }}Kč</h2>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
